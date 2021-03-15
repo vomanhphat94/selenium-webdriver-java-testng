@@ -10,18 +10,16 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Topic_02_Xpath_Css_Part_I {
+public class Topic_02_Xpath_Css_Part_I_exercise {
 	WebDriver driver;
 
 	@BeforeClass
 	public void beforeClass() {
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("https://demo.nopcommerce.com/register?returnUrl=%2F");
-
 	}
-
 
 	@Test
 	public void TC_01_ID() {
@@ -85,7 +83,7 @@ public class Topic_02_Xpath_Css_Part_I {
 		driver.findElement(By.xpath("//input[@id='ConfirmPassword']")).clear();;
 		driver.findElement(By.xpath("//input[@id='ConfirmPassword']")).sendKeys("Abcd1234");
 	}
-	
+
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
