@@ -1,6 +1,9 @@
 eclipse.preferences.version=1
 encoding//selenium/javaTester/Topic_01_Data_Type.java=UTF-8
-encoding//selenium/webdriver/Topic_02_Assert.java=UTF-8
+encoding//selenium/javaTester/Topic_02_Assert.java=UTF-8
+encoding//selenium/javaTester/Topic_3_String.java=UTF-8
+encoding//selenium/javaTester/Topic_4_And_Or.java=UTF-8
 encoding//selenium/webdriver/Topic_02_Xpath_Css_Part_I.java=UTF-8
 encoding//selenium/webdriver/Topic_02_Xpath_Css_Part_II.java=UTF-8
 encoding//selenium/webdriver/Topic_02_Xpath_Css_Part_I_exercise.java=UTF-8
+encoding//selenium/webdriver/Topic_03_Run_On_Browser.java=UTF-8

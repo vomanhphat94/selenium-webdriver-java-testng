@@ -24,7 +24,7 @@ public class Topic_02_Xpath_Css_Part_II {
 			
 	
 	Random randomGenerator = new Random();  
-	int randomInt = randomGenerator.nextInt(1000);  
+	int randomInt = randomGenerator.nextInt(100000);  
 	String userEmail = "username" + randomInt +"@gmail.com";
 
 	
@@ -36,7 +36,7 @@ public class Topic_02_Xpath_Css_Part_II {
 		
 	}
 
-	@Test
+	
 	public void TC_01_Empty_Email_And_Password() {
 		driver.get("http://live.demoguru99.com/");
 		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
@@ -48,7 +48,7 @@ public class Topic_02_Xpath_Css_Part_II {
 		Assert.assertTrue(driver.findElement(By.xpath("//div[@id='advice-required-entry-email' and text()='This is a required field.']")).isDisplayed());
 	}
 	
-	@Test
+	
 	public void TC_02_Invalid_Email_Address() {
 		driver.get("http://live.demoguru99.com/");
 		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
@@ -58,7 +58,7 @@ public class Topic_02_Xpath_Css_Part_II {
 		Assert.assertEquals(driver.findElement(By.xpath("//div[@id='advice-validate-email-email']")).getText(), expectedEmailFormatMessage);	
 	}
 	 
-	@Test
+
 	public void TC_03_Invalid_Password() {
 		driver.get("http://live.demoguru99.com/");
 		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
@@ -69,7 +69,7 @@ public class Topic_02_Xpath_Css_Part_II {
 		
 	}
 	
-	@Test
+
 	public void TC_04_Incorrect_Password() {
 		driver.get("http://live.demoguru99.com/");
 		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
@@ -84,7 +84,6 @@ public class Topic_02_Xpath_Css_Part_II {
 	
 	
 	@Test
-
 	public void TC_05_Create_A_New_Account() {
 		driver.get("http://live.demoguru99.com/");
 		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
@@ -92,30 +91,32 @@ public class Topic_02_Xpath_Css_Part_II {
 		// Input information for registration
 		driver.findElement(By.xpath("//input[@id='firstname']")).sendKeys(firstName);
 		driver.findElement(By.xpath("//input[@id='lastname']")).sendKeys(lastName);
-		//driver.findElement(By.xpath("//input[@did='email_address']")).sendKeys("username"+ randomInt +"@gmail.com");
+		//driver.findElement(By.xpath("//input[@id='email_address']")).sendKeys("username"+ randomInt +"@gmail.com");
 		driver.findElement(By.xpath("//input[@id='email_address']")).sendKeys(userEmail);
 		driver.findElement(By.xpath("//input[@id='password']")).sendKeys(password);
 		driver.findElement(By.xpath("//input[@id='confirmation']")).sendKeys(password);
 		driver.findElement(By.xpath("//button[@title='Register']")).click();
 
 		// Register success
-	//	Assert.assertEquals(driver.findElement(By.xpath("//li[@class='success-msg']")).getText(), registerSuccessMsg);
+	    Assert.assertEquals(driver.findElement(By.xpath("//li[@class='success-msg']//span")).getText(), registerSuccessMsg);
 		// Verify information after register
-		//Assert.assertEquals(driver.findElement(By.xpath("//div[@class='box-content']//p[@text()='Bear']")).getText(), firstName);
+		Assert.assertEquals(driver.findElement(By.xpath("//div[@class='box-content']//p[contains(text(),'Phat Vo')]/text()[1]")).getText(), firstName + " " + lastName);
+	//	Assert.assertEquals(driver.findElement(By.xpath("//div[@class='box-content']//p[contains(.,'Phat Vo')]")).getText().contains("Phat"), firstName + " " +  lastName);
 	//	Assert.assertEquals(driver.findElement(By.xpath("//div[@class='box']//p[contains(.,'Bear')]")).getText(), firstName);
 	//	Assert.assertEquals(driver.findElement(By.xpath("//li[@class='success-msg']")).getText(), lastName);
-	//	Assert.assertEquals(driver.findElement(By.xpath("//li[@class='success-msg']")).getText(), userEmail);
+	    Assert.assertEquals(driver.findElement(By.xpath("//div[@class='box-content']//p[contains(text(),'Phat Vo')]//text()[2]")).getText(), userEmail);
+	//    driver.findElement(By.xpath("//div[@class='account-cart-wrapper']//span[text()='Account']]")).click();
+	    //driver.findElement(By.xpath("////a[@title='My Account']")).click();
 	}
 	
 	//div[@class='footer']//a[contains(@text(),'My Account')]
 	public void TC_06_Login_With_Valid_Account() {
 		driver.findElement(By.xpath("//div[@class='footer']//a[@title='My Account']")).click();
-		
 	}
 
 	@AfterClass
 	public void afterClass() {
-		driver.quit();
+	//	driver.quit();
 	}
 
 }
