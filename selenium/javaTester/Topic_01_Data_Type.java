@@ -3,7 +3,9 @@ package javaTester;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Topic_01_Data_Type {
@@ -68,5 +70,17 @@ public class Topic_01_Data_Type {
 	// 
 	// Collection
 	List<String> studentName = new ArrayList<String>();
+	
+	String fullName = "Phat";
+	// String: Kiểu dữ liệu (data type: String/ int/ float/ double/ char/ Array/ Class/ Interface/ Collection/ ..)
+	// fullName: tên biến ( Variable/ field / Property )
+	// Phat: Value of variable
+	
+
+	// 1 element ( email textbox )
+	WebElement emailTextbox = driver.findElement(By.id(""));
+	
+	// Nhiều element
+	List <WebElement> checkboxes = driver.findElements(By.id(""));
 	
 }
