@@ -1,6 +1,5 @@
 package webdriver;
 
-import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -132,14 +131,6 @@ public class Topic_06_Textbox_TextArea {
 	}
 
 
-	public void TC_02_Login() {
-	}
-	
-	public void TC_03_New_Customer() {
-	}
-	
-	public void TC_04_Edit_Customer() {
-	}
 
 	@AfterClass
 	public void afterClass() {

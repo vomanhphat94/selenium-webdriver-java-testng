@@ -48,7 +48,7 @@ public class Topic_07_Default_Dropdown {
 
 	}
 
-//	@Test(invocationCount = 1)
+	@Test(invocationCount = 1)
 	public void TC_01_Create_Account_Selectbox() {
 		// Open Register Page
 		driver.get("https://demo.nopcommerce.com");
@@ -65,12 +65,14 @@ public class Topic_07_Default_Dropdown {
 		// Khởi tạo biến Select để thao tác với dropdown
 		select_2 = new Select(driver.findElement(By.cssSelector("select[name='DateOfBirthDay']")));
 		// Text 
-		System.out.println(select_2.getAllSelectedOptions());
-		select_2.selectByVisibleText("30");
-		System.out.println(select_2.getFirstSelectedOption().getText());
-		Assert.assertEquals(select_2.getFirstSelectedOption().getText(), "30");
-		Assert.assertEquals(select_2.getOptions().size(), 32);
 		
+		select_2.selectByVisibleText("30");
+
+		System.out.println("This is first selection " + select_2.getFirstSelectedOption().getText());
+		Assert.assertEquals(select_2.getFirstSelectedOption().getText(), "30");
+		System.out.println("All selected option " + select_2.getAllSelectedOptions());
+		Assert.assertEquals(select_2.getOptions().size(), 32);
+		System.out.println("Size of the dropdown: " + select_2.getOptions().size());
 		// Kiểm tra item trong dropdown đó
 		select_2.getOptions();
 		List<WebElement> allDate = select_2.getOptions();
@@ -78,7 +80,7 @@ public class Topic_07_Default_Dropdown {
 		// Kiểm tra số lượng có bằng với mong muốn hay không
 		//Assert.assertEquals(allDate.size(), 32); // 31 ngày + default value )
 		for (WebElement item : allDate) {
-			System.out.println(item.getText());
+			System.out.println("This is an option in the dropdown: " + item.getText());
 		}
 
 		// Có nhìu cách dùng 
@@ -152,7 +154,7 @@ public class Topic_07_Default_Dropdown {
 			element.click();
 		}
 	}
-	public void uncheckToCheckBoxo (By by) {
+	public void uncheckToCheckBox (By by) {
 		WebElement element = driver.findElement(by);
 		if (element.isSelected()) {
 			element.click();
