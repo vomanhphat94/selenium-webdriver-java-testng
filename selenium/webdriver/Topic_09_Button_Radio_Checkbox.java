@@ -109,14 +109,14 @@ public class Topic_09_Button_Radio_Checkbox {
 		//Assert.assertTrue(driver.findElement(By.xpath("//input[@value='Gout']/preceding-sibling::span[@class='mat-radio-outer-circle']")).isSelected());
 		
 		// CASE 3 - combine 1 and 2 
-		driver.findElement(By.xpath("//input[@value='Spring']/preceding-sibling::span[@class='mat-radio-outer-circle']")).click();
-		sleepInSecond(2);
-		Assert.assertFalse(driver.findElement(By.xpath("//input[@value='Spring']")).isSelected());
+//		driver.findElement(By.xpath("//input[@value='Spring']/preceding-sibling::span[@class='mat-radio-outer-circle']")).click();
+//		sleepInSecond(2);
+//		Assert.assertFalse(driver.findElement(By.xpath("//input[@value='Spring']")).isSelected());
 		
 		// CASE 4 -  dùng hàm click của JS - vừa click vừa verify luôn
-//		By springRadio = By.xpath("//input[@value='Spring']");
-//		clickByJs(springRadio);
-//		Assert.assertTrue(driver.findElement(springRadio).isSelected());
+		By springRadio = By.xpath("//input[@value='Spring']");
+		clickByJs(springRadio);
+		Assert.assertTrue(driver.findElement(springRadio).isSelected());
 	}
 	
 	
