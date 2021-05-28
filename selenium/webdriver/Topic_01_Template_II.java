@@ -15,7 +15,7 @@ public class Topic_01_Template_II {
 
 	@BeforeClass
 	public void beforeClass() {
-		System.setProperty("webdriver.chrome.driver",".\\browserDrivers\\chromedriver.exe" );
+		System.setProperty("webdriver.chrome.driver",".\\browerDriver\\chromedriver.exe" );
 		driver = new ChromeDriver();
 //		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -35,13 +35,13 @@ public class Topic_01_Template_II {
 		driver.findElement(By.name("btnLogin")).click();
 		String userID = driver.findElement(By.xpath("//td[text()='User ID :']/following-sibling::td")).getText();
 		System.out.println(userID);
-		String passwordUser =  driver.findElement(By.xpath("//td[text()='User ID :']/following-sibling::td")).getText();
+		String passwordUser =  driver.findElement(By.xpath("//td[text()='Password :']/following-sibling::td")).getText();
 		System.out.println(passwordUser);
 	}
 
 	@AfterClass
 	public void afterClass() {
-		driver.quit();
+	//	driver.quit();
 	}
 
 }

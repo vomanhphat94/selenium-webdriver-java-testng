@@ -111,17 +111,17 @@ public class Topic_10_Alert {
 		Assert.assertTrue(driver.findElement(By.xpath("//p[contains(text(),'Congratulations! You must have the proper credentials.')]")).isDisplayed());
 	}
 	
-	@Test
-	public void TC_04_Authentication_Alert_autoIT() throws IOException {
-		String projectPath = System.getProperty("user.dir");
-		String autoITScriptPath = projectPath + ".\\autoIT\\authen_chrome.exe";
-		
-		Runtime.getRuntime().exec(new String[] { autoITScriptPath, "admin", "admin"});
-		
-		driver.get("http://the-internet.herokuapp.com/basic_auth");
-		Assert.assertTrue(driver.findElement(By.xpath("//p[contains(text(),'Congratulations! You must have the proper credentials.')]")).isDisplayed());
 
-	}
+//	public void TC_04_Authentication_Alert_autoIT() throws IOException {
+//		String projectPath = System.getProperty("user.dir");
+////		String autoITScriptPath = projectPath + ".\\autoIT\\authen_chrome.exe";
+//		
+////		Runtime.getRuntime().exec(new String[] { autoITScriptPath, "admin", "admin"});
+//		
+//		driver.get("http://the-internet.herokuapp.com/basic_auth");
+//		Assert.assertTrue(driver.findElement(By.xpath("//p[contains(text(),'Congratulations! You must have the proper credentials.')]")).isDisplayed());
+//
+//	}
 	
 	
 
