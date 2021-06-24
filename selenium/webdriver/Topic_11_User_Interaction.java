@@ -27,7 +27,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 
-
 public class Topic_11_User_Interaction {
 	WebDriver driver;
 	WebDriverWait explicitWait;
@@ -140,7 +139,7 @@ public class Topic_11_User_Interaction {
 	}
 	
 
-	
+
 	public void sleepInSecond(long second) {
 		try {
 			Thread.sleep(second * 1000);
