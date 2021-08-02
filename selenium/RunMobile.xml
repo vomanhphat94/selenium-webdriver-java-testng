@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Mobile App" parallel="tests" thread-count="1">
+
+  <test name="Firefox">
+  	<parameter name ="browser" value="firefox"/>
+	<parameter name ="ipAddress" value="192.168.1.16"/>
+    <classes>
+      <class name="MobileAPP.Topic_01_Annotation"/>
+    </classes>
+  </test> <!-- Test -->
+  
+ 
+</suite> <!-- Suite -->

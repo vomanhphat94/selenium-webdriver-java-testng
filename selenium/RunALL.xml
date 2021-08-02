@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="Multiple PLatform" parallel="tests" thread-count="1">
+  
+  <listeners>
+  	<listener class-name="testng.TestNGListener"/>
+  </listeners>
+  
+  <suite-files>
+<!-- 		<suite-file path="RunMobile.xml"/>
+  	  <suite-file path="RunWeb.xml"/> -->
+  
+  </suite-files>
+    <packages>
+  	<package name="testng"/>
+  	<package name="MobileAPP"/>
+  	</packages>
+  	
+</suite> <!-- Suite -->
