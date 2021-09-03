@@ -1,4 +1,7 @@
 eclipse.preferences.version=1
+encoding//selenium/HaNoi/DongDa.java=UTF-8
+encoding//selenium/HaNoi/Person.java=UTF-8
+encoding//selenium/actions/BasePage.java=UTF-8
 encoding//selenium/javaTester/Topic_01_Data_Type.java=UTF-8
 encoding//selenium/javaTester/Topic_02_Assert.java=UTF-8
 encoding//selenium/javaTester/Topic_03_String.java=UTF-8
@@ -6,6 +9,7 @@ encoding//selenium/javaTester/Topic_04_And_Or.java=UTF-8
 encoding//selenium/javaTester/Topic_07_Loop_Statement.java=UTF-8
 encoding//selenium/javaTester/Topic_10_String_Check.java=UTF-8
 encoding//selenium/javaTester/Topic_11_List.java=UTF-8
+encoding//selenium/testng/Topic_02_Assert.java=UTF-8
 encoding//selenium/testng/Topic_04_Always_Run.java=UTF-8
 encoding//selenium/testng/Topic_05_Priority_Skip_Description.java=UTF-8
 encoding//selenium/testng/Topic_06_Data_Provider.java=UTF-8

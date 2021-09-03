@@ -8,14 +8,21 @@
   	<listener class-name="testng.TestNGListener"/>
   </listeners>
   
-  <suite-files>
-<!-- 		<suite-file path="RunMobile.xml"/>
-  	  <suite-file path="RunWeb.xml"/> -->
-  
-  </suite-files>
+<!--   <suite-files> -->
+<!-- 	<suite-file path="RunMobile.xml"/> -->
+<!--     <suite-file path="RunWeb.xml"/> -->
+<!--   </suite-files> -->
+  <test name="test package">
     <packages>
   	<package name="testng"/>
   	<package name="MobileAPP"/>
   	</packages>
-  	
+</test>
+<!--   	<test name="run package"> -->
+<!--   		<packages> -->
+<!-- 			<package name="IntegrationTest"/> -->
+<!-- 			<package name="WebAPP"/> -->
+<!-- 			<package name="MobileAPP"/> -->
+<!-- 		</packages> -->
+<!--   	</test> -->
 </suite> <!-- Suite -->

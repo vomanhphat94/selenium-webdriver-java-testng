@@ -20,9 +20,9 @@ public class Topic_07_Multiple_Parallel {
 	String projectLocation = System.getProperty("user.dir");
 	
 	
-		@Parameters("browser")
+	@Parameters({"browser", "url"})
 	  @BeforeClass
-	  public void beforeClass(@Optional("firefox") String browserName) {
+	  public void beforeClass(@Optional("firefox") String browserName, String urlValue) {
 			if(browserName.equals("firefox")) {
 				System.setProperty("webdriver.gecko.driver", projectLocation + "\\browserDrivers\\geckodriver.exe");
 				driver = new FirefoxDriver();
@@ -39,12 +39,20 @@ public class Topic_07_Multiple_Parallel {
 			}
 			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		  System.out.println("Before Class");
-		  
+			driver.get(urlValue);
+			sleepInSecond(2);
+			driver.switchTo().frame(driver.findElement(By.xpath("//div[@class='fb-page fb_iframe_widget']//iframe[contains(@title, 'Face')]")));
+			sleepInSecond(2);
+			String likefbNumber = driver.findElement(By.xpath("//a[text()='Automation FC']/parent::div/following-sibling::div")).getText();
+			sleepInSecond(2);
+			System.out.println(likefbNumber);
+			driver.switchTo().defaultContent();
+			sleepInSecond(2);
+
 	  }
-	  
-	  @Test
+	@Test
 	  public void TC_01_iFrame() {
-			driver.get("https://automationfc.com/2020/02/18/training-online-automation-testing/");
+			//driver.get("https://automationfc.com/2020/02/18/training-online-automation-testing/");
 			sleepInSecond(2);
 			driver.switchTo().frame(driver.findElement(By.xpath("//div[@class='fb-page fb_iframe_widget']//iframe[contains(@title, 'Face')]")));
 			sleepInSecond(2);

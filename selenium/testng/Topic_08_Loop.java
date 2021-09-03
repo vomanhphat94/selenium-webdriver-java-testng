@@ -23,8 +23,6 @@ public class Topic_08_Loop {
 		  System.out.println("Before Class");
 		  System.setProperty("webdriver.gecko.driver", ".\\browserDrivers\\geckodriver.exe");
 		  driver = new FirefoxDriver();
-
-
 	  }
 
 		@Test(invocationCount = 3)

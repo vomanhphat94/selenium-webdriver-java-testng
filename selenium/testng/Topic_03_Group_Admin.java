@@ -6,9 +6,6 @@ import static org.testng.Assert.assertTrue;
 
 public class Topic_03_Group_Admin {
 	
-	
-
-	
 	@Test(groups = {"admin", "us"} )
 	public void TC_01() {
 

@@ -105,18 +105,6 @@ public class Topic_13_Frame_iFrame {
 		}
 	}
 	
-
-	public void TC_03_Popup_NotIn_DOM() {
-
-	}
-	
-
-	public void TC_04_Popup_In_DOM_And_Condition() {
-	
-
-	}
-	
-	
 	public void TC_05_Right_Click() {
 		driver.get("http://swisnl.github.io/jQuery-contextMenu/demo.html");
 

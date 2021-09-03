@@ -17,12 +17,15 @@ public class Topic_05_Priority_Skip_Description {
 		  // Init driver lên
 		  // Nếu như trong before class mà fail thì các testcase bên dưới/after class không giờ chạy
 		  // Giả sử run 20 class Test -> mở ra 20 browser, mà before k run dc -> After k run dc -> Phải tự đi tắt manual 20 browser
-		  System.setProperty("webdriver.gecko.driver", ".\\browerDrivers\\geckodriver.exe");
-		  driver = new FirefoxDriver();
-		  driver.get("https://automationfc.com");
+//		  System.setProperty("webdriver.gecko.driver", ".\\browserDrivers\\geckodriver.exe");
+//		  driver = new FirefoxDriver();
+//		  driver.get("https://automationfc.com");
 		 // Assert.assertTrue(false);
 	  }
 
+	  // By default, TCs will sort : Alphabet
+	  // 0-9 - A-Z
+	  
 	@Test(priority=1)
 	  public void TC_01_Add_New_Customer() {
 		  System.out.println("Run Testcase 01");
@@ -46,6 +49,7 @@ public class Topic_05_Priority_Skip_Description {
 		
 	}
 	// Hoặc xóa @Test
+	// Hoặc comment @Test
 	@Test(priority=4, enabled = false)
 	public void TC_05_Delete_Customer() {
 		System.out.println("Run Testcase 02");
@@ -58,7 +62,7 @@ public class Topic_05_Priority_Skip_Description {
 		  System.out.println("After Class");
 		  // Close Browser 
 		  // Close driver 
-		  driver.quit();
+		  //driver.quit();
 	  }
 
 }

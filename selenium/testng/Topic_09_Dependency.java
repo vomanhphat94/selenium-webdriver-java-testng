@@ -12,7 +12,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(testng.TestNGListener.class)
+@Listeners(listenerConfig.TestNGListener.class)
 public class Topic_09_Dependency {
 	WebDriver driver;
 	By emailTextBox = By.xpath("//*[@id='email']");
@@ -28,11 +28,13 @@ public class Topic_09_Dependency {
 
 
 	  }
-
+	  
+	  	// Test trên mà fail thì test dưới cũng fail
+	  	// Test nên phụ thuộc nhau
 		@Test
 		  public void TC_01_Add_New_Customer() {
 			  System.out.println("Run Testcase 01");
-			  Assert.assertTrue(false);
+			  Assert.assertTrue(true);
 			  
 		  }
 		

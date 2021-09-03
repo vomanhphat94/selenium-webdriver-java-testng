@@ -2,33 +2,52 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 
-<suite name="NameOfProject" parallel="tests" thread-count="1">
+<!-- <suite name="NameOfProject" parallel="tests" thread-count="1">  -->
+<suite name="NameOfProject" parallel="tests" thread-count="2">
+<!-- 	<groups> -->
+<!-- 		<run> -->
+<!-- 			<include name="web" /> -->
+<!-- 			<exclude name ="integration"/> -->
+<!-- 		</run> -->
+<!-- 	</groups> -->
+
   <listeners>
-  	<listener class-name="testng.TestNGListener"/>
+  	<listener class-name="listenerConfig.TestNGListener"/>
   </listeners>
   
- <!--   <test name="Chrome">
+   <test name=" Run on Chrome">
 	<parameter name ="browser" value="chrome"/>
-	<parameter name ="ipAddress" value="192.168.1.15"/>
+	<parameter name="url" value ="https://automationfc.com/2020/02/18/training-online-automation-testing/"/>
+	
+<!-- 	<parameter name ="ipAddress" value="192.168.1.15"/> -->
 	
     <classes>
       <class name="testng.Topic_07_Multiple_Parallel"/>
     </classes>
-  </test>  -->
+  </test>
+
+	<test name="Run on Firefox">
+	<parameter name ="browser" value="firefox"/>
+	<parameter name="url" value ="https://automationfc.com/2020/02/18/training-online-automation-testing/"/>
+	
+		<classes>
+			<class name ="testng.Topic_07_Multiple_Parallel" />
+			<class name="webdriver.Topic_01_Template" />
+			<class name="testng.Topic_01_Annotation" />
+		</classes>
+<!-- 		<packages> -->
+<!-- 			<package name="IntegrationTest"/> -->
+<!-- 			<package name="WebAPP"/> -->
+<!-- 			<package name="MobileAPP"/> -->
+<!-- 		</packages> -->
+		
+	</test>
   
-  <test name="Firefox">
-<!--   	<parameter name ="browser" value="firefox"/>-->
-		<parameter name ="ipAddress" value="192.168.1.16"/>
-    <classes>
-      <class name="testng.Topic_07_Multiple_Parallel"/>
-    </classes>
-  </test> <!-- Test -->
-  
-<!--   <test name="Edge">
-	<parameter name ="browser" value="edge"/>
-		<parameter name ="ipAddress" value="192.168.1.17"/>
-    <classes>
-      <class name="testng.Topic_07_Multiple_Parallel"/>
-    </classes>
-  </test>  -->
-</suite> <!-- Suite -->
+<!--   <test name="Run on Edge"> -->
+<!-- 	<parameter name ="browser" value="edge"/> -->
+<!-- 		<parameter name ="ipAddress" value="192.168.1.17"/> -->
+<!--     <classes> -->
+<!--       <class name="testng.Topic_07_Multiple_Parallel"/> -->
+<!--     </classes> -->
+<!--   </test>  -->
+</suite> 

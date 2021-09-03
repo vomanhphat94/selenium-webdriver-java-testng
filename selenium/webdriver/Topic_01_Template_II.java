@@ -10,9 +10,13 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import actions.BasePage;
+
 public class Topic_01_Template_II {
 	WebDriver driver;
-
+	BasePage basePage;
+	
+	
 	@BeforeClass
 	public void beforeClass() {
 		System.setProperty("webdriver.chrome.driver",".\\browerDriver\\chromedriver.exe" );
@@ -20,11 +24,13 @@ public class Topic_01_Template_II {
 //		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		basePage = new BasePage();
 	}
 
 
 	public void TC_01_ValidateCurrentUrl() {
 		driver.get("http://demo.guru99.com/v4/");
+		
 	}
 
 	@Test
