@@ -20,7 +20,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.sun.org.apache.xerces.internal.impl.xpath.XPath;
+
 
 public class Topic_17_Wait_Element_Status_Part1 {
 	WebDriver driver;

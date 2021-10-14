@@ -9,14 +9,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Topic_01_Data_Type {
-	// Ngầm định/ nguyên thủy
-	// Chứa kí tự ( Duy nhất 1 kí tự )
+	// Ngáº§m Ä‘á»‹nh/ nguyÃªn thá»§y
+	// Chá»©a kÃ­ tá»± ( Duy nháº¥t 1 kÃ­ tá»± )
 	// char
 	char a = 'a';
 	
 	
 	
-	// Chứa số nguyên ( k có dấu )
+	// Chá»©a sá»‘ nguyÃªn ( k cÃ³ dáº¥u )
 	// byte
 	byte byteNumber = 127;
 	// short
@@ -26,61 +26,61 @@ public class Topic_01_Data_Type {
 	// long
 	long longNumber = 5000000;
 	
-	// Chứa số thực ( có dấu )
+	// Chá»©a sá»‘ thá»±c ( cÃ³ dáº¥u )
 	// float
 	float floatNumber = 59.635F;
 	// double
 	double doubleNumber = 5659.3999D;
 	
-	// Luận lí ( Đúng/ sai )
+	// Luáº­n lÃ­ ( Ä�Ãºng/ sai )
 	// boolean
 	boolean status = true;
 	
 // ======================================================
-	// Tham chiếu
-	// Chứa chuỗi kí tự
+	// Tham chiáº¿u
+	// Chá»©a chuá»—i kÃ­ tá»±
 	// String
 	String name = "ABC DEF";
 	String address = "1009/352/5235/7345 NTH";
 	String password ="@#$^#$%&#$%&";
 	
 	
-	// Chứa class 
+	// Chá»©a class 
 	// Class
 	Topic_01_Data_Type topic01;
 	
 	
 	
-	// Kiểu đối tượng
+	// Kiá»ƒu Ä‘á»‘i tÆ°á»£ng
 	// Object
 	
-	// Kiểu mảng
+	// Kiá»ƒu máº£ng
 	// Array
 	String[] students = {"A", "B", "C"};
 	String[] stringvalue = {name, address, password};
 	int[] salary = {byteNumber, shortNumber, intNumber};
-	// Kiểu interface
+	// Kiá»ƒu interface
 	// Interface
 	WebDriver driver;
 	RemoteWebDriver remoteDriver;
 	
-	// Kiểu collection (List/Set/Queue nó là interface Interface)
-	// Trong nó có các class như là
+	// Kiá»ƒu collection (List/Set/Queue nÃ³ lÃ  interface Interface)
+	// Trong nÃ³ cÃ³ cÃ¡c class nhÆ° lÃ 
 	// list: ArrayList/ LinkedList ...
 	// 
 	// Collection
 	List<String> studentName = new ArrayList<String>();
 	
 	String fullName = "Phat";
-	// String: Kiểu dữ liệu (data type: String/ int/ float/ double/ char/ Array/ Class/ Interface/ Collection/ ..)
-	// fullName: tên biến ( Variable/ field / Property )
+	// String: Kiá»ƒu dá»¯ liá»‡u (data type: String/ int/ float/ double/ char/ Array/ Class/ Interface/ Collection/ ..)
+	// fullName: tÃªn biáº¿n ( Variable/ field / Property )
 	// Phat: Value of variable
 	
 
 	// 1 element ( email textbox )
 	WebElement emailTextbox = driver.findElement(By.id(""));
 	
-	// Nhiều element
+	// Nhiá»�u element
 	List <WebElement> checkboxes = driver.findElements(By.id(""));
 	
 }
