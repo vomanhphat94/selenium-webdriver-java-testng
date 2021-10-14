@@ -29,10 +29,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.sun.org.apache.xerces.internal.impl.xpath.XPath;
-
-
-import sun.util.calendar.BaseCalendar.Date;
 
 public class Topic_17_Wait_Element_Status_Part4_Explicit {
 	WebDriver driver;
