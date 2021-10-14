@@ -55,8 +55,8 @@ public class Topic_06_Condition_Statement {
 //		System.setProperty("webdriver.ie.driver", IEDriverLocation);
 //		driver = new InternetExplorerDriver();
 
-//		System.setProperty("webdriver.chrome.driver", ChromeDriverLocation);
-//		driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", ChromeDriverLocation);
+		driver = new ChromeDriver();
 
 		if(driver.toString().contains("internet explorer")) {
 			System.out.println("Click by javascript");
