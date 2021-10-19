@@ -7,6 +7,7 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.remote.server.handler.GetAllWindowHandles;
 
 public class Topic_02_Data_Type {
@@ -51,6 +52,7 @@ public class Topic_02_Data_Type {
 		address.trim();
 		homePageLinks.size();
 		allWindows.addAll(productName);
+
 	}
 	
 	public static void main(String[] args) {

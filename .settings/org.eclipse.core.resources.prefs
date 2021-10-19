@@ -2,12 +2,18 @@ eclipse.preferences.version=1
 encoding//selenium/HaNoi/DongDa.java=UTF-8
 encoding//selenium/HaNoi/Person.java=UTF-8
 encoding//selenium/actions/BasePage.java=UTF-8
+<<<<<<< HEAD
+=======
 encoding//selenium/javaTester/Topic_01_Data_Type.java=UTF-8
+>>>>>>> branch 'master' of https://github.com/vomanhphat94/selenium-webdriver-java-testng
 encoding//selenium/javaTester/Topic_01_Variable.java=UTF-8
 encoding//selenium/javaTester/Topic_02_Assert.java=UTF-8
 encoding//selenium/javaTester/Topic_02_Data_Type.java=UTF-8
+<<<<<<< HEAD
+=======
 encoding//selenium/javaTester/Topic_02_Execise.java=UTF-8
 encoding//selenium/javaTester/Topic_03_Compare.java=UTF-8
+>>>>>>> branch 'master' of https://github.com/vomanhphat94/selenium-webdriver-java-testng
 encoding//selenium/javaTester/Topic_03_String.java=UTF-8
 encoding//selenium/javaTester/Topic_04_And_Or.java=UTF-8
 encoding//selenium/javaTester/Topic_04_Operator.java=UTF-8

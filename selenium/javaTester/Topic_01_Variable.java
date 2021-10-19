@@ -11,6 +11,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Topic_01_Variable {
 
+
 	// Đây là hàm khởi tạo ( Phải trùng tên vs class )
 	// Biến được tạo trong đây cũng là biến local
 	public Topic_01_Variable() {
@@ -141,7 +142,6 @@ public class Topic_01_Variable {
 		this.studentName_2 = sdtName;
 	}
 	
-
 
 	
 	
