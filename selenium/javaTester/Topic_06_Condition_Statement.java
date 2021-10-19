@@ -70,8 +70,8 @@ public class Topic_06_Condition_Statement {
 	}
 	
 	@Parameters("browser")
-	@Test
 	public void TC_03_If_Else_If_Else(String browserName) {
+		// Best Practice : Không nên if-else quá nhiều
 		if(browserName.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", ChromeDriverLocation);
 			driver = new ChromeDriver();
@@ -91,6 +91,24 @@ public class Topic_06_Condition_Statement {
 		System.out.println(driver.toString() + "  " + browserName);
 		driver.quit();
 	}
+	@Test
+	public void TC_04_If_Else_If_Else() {
+		String pageName = "Login";
+		if(pageName.equals("Login")) {
+			// Login page loginPage = new LoginPage();
+			// return loginPage;
+		} else if (pageName.equals("Register")) {
+			// RegisterPage registerPage = new RegisterPage();
+			// return registerPage;
+		} else if (pageName.equals("New Customer")) {
+			// CustomerPage customerPage = new CustomerPage();
+			// return customerPage;
+		} else {
+			// HomePage homePage = new HomePage();
+			// return homePage;
+		}
+	}
+	
 	
 
 
