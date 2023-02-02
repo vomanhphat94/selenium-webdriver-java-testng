@@ -26,11 +26,21 @@ public class Topic_17_Wait_Element_Status_Part1 {
 	WebDriver driver;
 	WebDriverWait explicitWait;
 
-
+	String projectPath = System.getProperty("user.dir");
+	String osName = System.getProperty("os.name");
 
 	@BeforeClass
 	public void beforeClass() {
-		System.setProperty("webdriver.chrome.driver", ".\\browerDrivers\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", ".\\browerDrivers\\chromedriver.exe");
+		
+		if (osName.contains("Windows")) {
+			System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDrivers\\chromedriver.exe");
+		} else {
+			System.setProperty("webdriver.Chrome.driver", projectPath + "/browserDrivers/chromedriver");
+		}
+
+		
+		
 		driver = new ChromeDriver();
 //		driver = new FirefoxDriver();
 		System.out.println(driver.toString());
