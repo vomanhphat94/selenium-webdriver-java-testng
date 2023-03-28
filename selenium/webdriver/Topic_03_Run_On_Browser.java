@@ -16,7 +16,8 @@ public class Topic_03_Run_On_Browser {
 
 	WebDriver driver;
 	String getProjectLocation = System.getProperty("user.dir");
-	String ChromeDriverLocation = getProjectLocation + "\\browserDrivers\\chromedriver.exe";
+	String ChromeDriverLocation = getProjectLocation + "/browserDrivers/chromedriver.exe";
+	String ChromeDriverLocationMac = getProjectLocation + "/browserDrivers/chromedriver";
 	
 	//@Test
 	public void TC_01_Run_On_Firefox() {
@@ -41,7 +42,7 @@ public class Topic_03_Run_On_Browser {
 		// . = Project location
 		//System.setProperty("webdriver.chrome.driver",".\\browserDrivers\\chromedriver.exe" );
 		//Option 3
-		System.setProperty("webdriver.chrome.driver", ChromeDriverLocation );
+		System.setProperty("webdriver.chrome.driver", ChromeDriverLocationMac );
 
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("http://google.com");

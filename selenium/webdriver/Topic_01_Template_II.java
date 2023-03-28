@@ -19,7 +19,7 @@ public class Topic_01_Template_II {
 	
 	@BeforeClass
 	public void beforeClass() {
-		System.setProperty("webdriver.chrome.driver",".\\browerDriver\\chromedriver.exe" );
+		System.setProperty("webdriver.chrome.driver","./browerDriver/chromedriver.exe" );
 		driver = new ChromeDriver();
 //		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
